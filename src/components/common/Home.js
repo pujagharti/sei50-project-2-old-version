@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 
-const Home = () => {
-  return (
-    <section className="hero is-success is-fullheight">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-        Recipe Finder
-          </h1>
-          <h2 className="subtitle">
-        Find Recipe By Type, Cuisine or Diet
-          </h2>
+
+class Home extends Component {
+  render() {
+    return (
+      <Fragment>
+        <div className="front-container">
+          <div className="home">
+            <div className="searchingInput">
+              <input type="text" className="home-search" />
+            </div>
+            <div className="home-icon home-one">one</div>
+            <div className="home-icon home-two">two</div>
+            <div className="home-icon home-three">three</div>
+          </div>
         </div>
-      </div>
-    </section> 
-  )
+      </Fragment>
+    )
+  }
 }
-
 export default Home

@@ -24,7 +24,10 @@ class DisplayRecipes extends React.Component {
 
   render()  {
     return (
-      <div>Cuisines</div>
+      <section>
+        <div>Cuisines</div>
+      
+      </section>
     )
   }
 }
