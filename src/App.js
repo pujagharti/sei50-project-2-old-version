@@ -1,9 +1,13 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React, { Fragment } from 'react'
+import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
 
 const App = () => {
   return (
-    <Navbar />
+    <Fragment>
+      <Navbar />
+      <Home />
+    </Fragment>
   )
 }
 
