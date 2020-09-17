@@ -7,22 +7,19 @@
   margin: 0!important;
   background-color: #fff;
 }
-
 .grid-container
 {
   width: 100%;
   height: 12vh;
-
-
   display: grid;
-  grid-template-columns: repeat(9/ 1fr);
+  grid-template-columns: repeat(10/ 1fr);
   grid-template-rows: repeat(4/ 1fr);
   border-bottom: 2px solid black;
 }
 .webname
 {
   grid-column: 1/4;
-  grid-row: 2/4;
+  grid-row: 1/5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,20 +33,40 @@
   align-items: center;
   text-align: center;
   font-size: 17.5px;
-  
+  padding: 15px;
+  box-sizing: border-box;
 }
-.menuBtn:hover
+.menuBtn > button
 {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+}
+.menuBtn > button:hover
+{
+  height: 33px;
   border-bottom: 2px solid green;
 }
 .recipes
 {
-  grid-column: 6/8;
-  grid-row: 2/4;
-  margin-right: 30px;
+  grid-column: 9/10;
+  grid-row: 1/5;
 }
 .types
 {
-  grid-column: 8/10;
-  grid-row: 2/4;
+  grid-column: 10/11;
+  grid-row: 1/5;
+}
+.navi
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  background-color: green;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 70vh;
 }
