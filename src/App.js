@@ -6,10 +6,9 @@ import Breakfast from './components/common/Breakfast'
 import Brunch from './components/common/Brunch'
 import Lunch from './components/common/Lunch'
 import Dinner from './components/common/Dinner'
-class App extends Component {
+import Vegetarian from './components/common/Vegetarian'
 
-  
-    
+class App extends Component {
 
   render() {
     return (
@@ -25,6 +24,7 @@ class App extends Component {
               <Route exact path="/brunch" component={Brunch} />
               <Route exact path="/lunch" component={Lunch} />
               <Route exact path="/dinner" component={Dinner} />
+              <Route exact path="/vegetarian" component={Vegetarian} />
             </Switch>
           </div>
         </BrowserRouter>

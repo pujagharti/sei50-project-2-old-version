@@ -21,11 +21,11 @@ class DisplayRecipes extends React.Component {
     this.setState({ recipes: response.data })
   }
 
-
   render()  {
     return (
       <section>
-        <div>Cuisines</div>
+        <div>Recipes </div>
+        
       
       </section>
     )
