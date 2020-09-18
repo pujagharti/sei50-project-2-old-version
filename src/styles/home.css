@@ -75,6 +75,7 @@ body
   margin-left: 25%;
   margin-right: 25%;
   order: 3;
+
 }
 
 .home-icon 
@@ -88,7 +89,10 @@ body
 }
 .home-icon > img
 {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 500px;
+  height: 250px;
+  
 
 }
 
