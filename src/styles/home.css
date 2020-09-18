@@ -1,9 +1,10 @@
 body
 {
   background: linear-gradient(green, blue);
-  
+  /* background-image: url('../styles/background.jpeg'); */
   background-repeat: no-repeat; 
   background-position: center;
+  
 }
 
 

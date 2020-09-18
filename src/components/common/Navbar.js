@@ -26,11 +26,11 @@ class Navbar extends Component {
       <Fragment>
         <div className="front-container">
           <div className="grid-container">
-            <div className="webname"><Link to='/'>webname</Link></div>
+            <div className="webname"><Link to='/'>MENU</Link></div>
             
 
             <div className="buttonCuisinesSize" style={{position: 'relative'}}>
-              <div className="menuBtn choose cuisines"><button onClick={e=>this.handleDropDown('chooseCuisines')}>choose cuisines</button></div>
+              <div className="menuBtn cuisines"><button onClick={e=>this.handleDropDown('cuisines')}>Choose Cuisines</button></div>
               {
                 this.state.dropCuisines && <Fragment>
                   <div className="navi">
@@ -42,7 +42,7 @@ class Navbar extends Component {
               
             
             
-            <div className="buttonTypesSize" style={{position: 'relative'}}>
+            <div className="buttonTypesSize" style={{ position: 'relative' }}>
               <div className="menuBtn types" ><button onClick={e=>this.handleDropDown('types')}>Meal Types</button></div>
               {
                 this.state.dropTypes && <Fragment>
