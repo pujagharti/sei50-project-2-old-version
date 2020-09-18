@@ -18,7 +18,7 @@ class DisplayRecipes extends React.Component {
   }
   render() {
     return (
-      <div>Cuisines</div>
+      <div>Choose Cuisines</div>
     )
   }
 }
