@@ -2,11 +2,11 @@ import React, { Component, Fragment } from 'react'
 import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Breakfast from './components/common/Breakfast'
-import Brunch from './components/common/Brunch'
-import Lunch from './components/common/Lunch'
-import Dinner from './components/common/Dinner'
-import Vegetarian from './components/common/Vegetarian'
+import Vegan from './components/common/Vegan'
+import Keto from './components/common/Keto'
+import Dessert from './components/common/Dessert'
+import Singular from './components/common/Singular'
+import DishType from './components/common/DishType'
 
 class App extends Component {
 
@@ -20,11 +20,11 @@ class App extends Component {
           
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/breakfast" component={Breakfast} />
-              <Route exact path="/brunch" component={Brunch} />
-              <Route exact path="/lunch" component={Lunch} />
-              <Route exact path="/dinner" component={Dinner} />
-              <Route exact path="/vegetarian" component={Vegetarian} />
+              <Route exact path="/vegan" component={Vegan} />
+              <Route exact path="/keto" component={Keto} />
+              <Route exact path="/dessert" component={Dessert} />
+              <Route exact path="/singular/:id" component={Singular} />
+              <Route exact path="/dishtype/:type" component={DishType} />
             </Switch>
           </div>
         </BrowserRouter>
