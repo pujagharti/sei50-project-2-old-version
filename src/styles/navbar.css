@@ -3,22 +3,21 @@
   
   box-sizing: border-box;
   padding: 0!important;
-  margin: 0!important;
   background-color: #fff;
 }
 a:link
 {
-  margin: 0!important;
+  
   padding: 0!important;
-  width: auto!important;
   height: auto!important;
+  color: black;
 }
 a:visited
 {
-  margin: 0!important;
+  
   padding: 0!important;
-  width: auto!important;
   height: auto!important;
+  color: black;
 }
 .grid-container
 {
@@ -26,32 +25,43 @@ a:visited
   height: 12vh;
   
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(12/ 1fr);
-  grid-template-rows: repeat(4/ 1fr);
+  display: flex;
   border-bottom: 2px solid black;
-  column-gap: 15px;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
 }
 .webname
 {
-  grid-column: 1/4;
-  grid-row: 1/5;
+  width: 15%;
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 17.5px;
+  font-size: 18.5px;
   align-items: center;
+  order: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+
 }
 .menuBtn
 {
+  width: 15%;
+  min-height: 35px;
   display: flex;
   justify-content: center;
+  margin-right: 15px;
+  align-items: center;
   
   text-align: center;
   font-size: 17.5px;
-  padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
+  order: 2;
+  background-color: lightblue;
   
 }
 .menuBtn > button
@@ -64,21 +74,7 @@ a:visited
   font-weight: bold;
   overflow: hidden;
 }
-.breakfast
-{
-  grid-column: 11/12;
-  grid-row: 1/5;
-}
-.lunch
-{
-  grid-column: 12/13;
-  grid-row: 1/5;
-}
-.dinner
-{
-  grid-column: 13/14;
-  grid-row: 1/5;
-}
+
 button:focus
 {
   color: green;

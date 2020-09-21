@@ -1,14 +1,14 @@
 
 import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 
 class Navbar extends Component {
 
 
-  
-
   render() {
+
+    
     return (
 
       <Fragment>
@@ -16,9 +16,9 @@ class Navbar extends Component {
           <div className="grid-container">
             <div className="webname"><Link to='/'>Food Life</Link></div>
 
-            <button className="menuBtn breakfast"><Link to="/dishtype/breakfast" >Breakfast</Link></button>
-            <button className="menuBtn lunch" ><Link to="/dishtype/lunch" >Lunch</Link></button>
-            <button className="menuBtn dinner" ><Link to="/dishtype/dinner" >Dinner</Link> </button>
+            <Link className="menuBtn" to="/dishtype/breakfast" >Breakfast</Link>
+            <Link className="menuBtn" to="/dishtype/lunch" >Lunch</Link>
+            <Link className="menuBtn" to="/dishtype/dinner" >Dinner</Link>
 
           </div>
 
@@ -27,5 +27,5 @@ class Navbar extends Component {
     )
   }
 }
-export default Navbar
+export default withRouter(Navbar)
 

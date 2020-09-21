@@ -1,13 +1,25 @@
 body
 {
-  background: linear-gradient(green, blue);
-  /* background-image: url('../styles/background.jpeg'); */
+  /* background-image: url('./background.jpeg'); */
   background-repeat: no-repeat; 
   background-position: center;
-  color: white;
+  background-size: cover;
+  color: black;
+  background-color: white;
+  font-family: 'Heebo', sans-serif;
 }
 
+h1
+{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5.5vh;
+  font-weight: bold;
+  font-size: 20.5px
 
+}
 
 .front-container
 {
@@ -15,10 +27,12 @@ body
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 15px;
   padding-left: 15vw;
   padding-right: 15vw;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   box-sizing: border-box;
 }

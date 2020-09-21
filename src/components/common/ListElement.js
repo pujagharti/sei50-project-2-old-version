@@ -12,7 +12,7 @@ class ListElement extends Component {
 
   async componentDidMount() {
     const res = await getSingular(this.props.food.id)
-    this.setState({element: res.data})
+    this.setState({ element: res.data })
     console.log(res.data)
   }
 
@@ -23,11 +23,19 @@ class ListElement extends Component {
 
     return (
       <Fragment>
-        <div className="listElement" style={{width: '100%'}}>
+        <div className="list-element" style={{ width: '100%' }}>
           <Link to={`/singular/${id}`}>{title}</Link>
-          {
-            this.state.element.vegan && ": Vegan"
-          }
+          <div className="list-labels">
+            {
+              !this.props.diet && this.state.element.vegetarian && <div className="list-label">Vegetarian</div>
+            }
+            {
+              this.state.element.glutenFree && <div className="list-label">Gluten free</div>
+            }
+            {
+              !this.props.diet && this.state.element.vegan && <div className="list-label">Vegan</div>
+            }
+          </div>
         </div>
       </Fragment>
     )

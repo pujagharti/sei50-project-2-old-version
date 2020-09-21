@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { getDessert } from '../../lib/api'
+import ListElement from './ListElement'
 
 
 class Dessert extends Component {
@@ -20,12 +21,15 @@ class Dessert extends Component {
     
     return (
       <Fragment>
-        <div className="diet-content">
-          {this.state.dessert.map(recipe => {
-            return (
-              <Link to={`singular/${recipe.id}`} key={recipe.id}>{recipe.title}</Link>
-            )
-          })}
+        
+
+        <div className="dishType-content">
+
+          <h1>Dessert Menu</h1>
+
+          <div className="left-side">
+            {this.state.dessert.map(recipe => <ListElement key={recipe.id} food={recipe} diet={true} />)}
+          </div>
         </div>
       </Fragment>
     )

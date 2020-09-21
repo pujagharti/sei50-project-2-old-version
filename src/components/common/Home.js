@@ -13,13 +13,15 @@ class Home extends Component {
 
   async componentDidMount() {
     const res = await getFoodName()
-    console.log(res.data.results)
-    return this.setState({ foodNames: res.data })
+    return this.setState({ foodNames: res.data.results })
   }
   
-  handleSearch = (e) => {
+
+  handleChange = (e) => {
     this.setState({ searchNames: e.target.value })
+
   }
+  
 
   /* handleClick = async event => {
     event.preventDefault()
@@ -29,17 +31,22 @@ class Home extends Component {
 
   
   render() {
-    //const names = this.state.searchNames && this.state.foodNames && this.state.foodNames.results.filter(food => food.title.toLowerCase().includes([...this.state.searchNames.toLowerCase()]))
-    
-    //console.log(names)
+    if ( this.state.foodNames == null) return null
+    const names = this.state.searchNames && this.state.foodNames.filter(element => [...element.title].toString().toLowerCase().includes([...this.state.searchNames].toString().toLowerCase()))
+    console.log(names)
     return (
       <Fragment>
         <div className="home">
           <div className="searchingInput">
             <span> Search for tasty recipes by Meal Type, Cuisine or Diet Type </span>
-            <input type="text" name="searchNames" className="home-search" />
+            <input onChange = {e =>this.handleChange(e)} type="text" name="searchNames" className="home-search" />
+            {
+              names && <div className="foodlist">{names.map(name => 
+                <Link key={name.id} to={`/singular/${name.id}`} >{ name.title }</Link>
+              )}</div>
+            }
+            
           </div>
-          {/* Create 3 boxes with clickable images that takes user to API request for 3 types of diet */}
           
           <div className="home-icon home-one"><Link to="/vegan"><img onClick={this.state.handleClick} src={require('../../styles/thegirl.jpg')} alt="vegan"/></Link></div>
           

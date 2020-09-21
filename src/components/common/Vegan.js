@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { getVeganRecipes } from '../../lib/api'
+import ListElement from './ListElement'
 
 class Vegan extends React.Component {
   state = { 
@@ -19,12 +20,15 @@ class Vegan extends React.Component {
   render() {
     if (!this.state.recipes) return null
     return (
-      <div className="diet-content">
-        {this.state.recipes.map(recipe => {
-          return (
-            <Link to={`/singular/${recipe.id}`} key={recipe.id}>{recipe.title}</Link>
-          )
-        })}
+      
+      <div className="dishType-content">
+
+        <h1>Vegan Menu</h1>
+
+        <div className="left-side">
+
+          {this.state.recipes.map(recipe => <ListElement key={recipe.id} food={recipe} diet={true} />)}
+        </div>
       </div>
       
     )
