@@ -33,7 +33,9 @@ npm run dev
  
 ## Code example
 
-The main app component.
+- Root app component.
+
+This is a main component with exact routes.
  ```
 class App extends Component {
 
@@ -61,7 +63,9 @@ class App extends Component {
 }
  ```
 
-Searchbar component 
+- Searchbar
+
+This is a component to present the fetched REST API data as the result of given input. Visitor can search the favorite food dish by type.
 ```
 class Home extends Component {
 
