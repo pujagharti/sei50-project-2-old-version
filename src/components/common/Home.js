@@ -22,18 +22,9 @@ class Home extends Component {
 
   }
   
-
-  /* handleClick = async event => {
-    event.preventDefault()
-    const response = await 
-    this.setState({ recipes: response.data})
-  } */
-
-  
   render() {
     if ( this.state.foodNames == null) return null
     const names = this.state.searchNames && this.state.foodNames.filter(element => [...element.title].toString().toLowerCase().includes([...this.state.searchNames].toString().toLowerCase()))
-    console.log(names)
     return (
       <Fragment>
         <div className="home">
