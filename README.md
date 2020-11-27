@@ -1,6 +1,6 @@
 
 
-## Food Life - MERN project
+# General Assembly Project 2: Food Life - MERN project
 Food Life is a web application to provide the selection of food in specified types.
 
 ## Timeframe: 3 days
