@@ -2,14 +2,18 @@
 
 ## Food Life - MERN project
 Food Life is a web application to provide the selection of food in specified types.
-Timeframe:
-3 days
-Goal:
+
+## Timeframe: 3 days
+
+## Goal:
 To produce a full-stack web application using React, REST API, and CSS.
 Technologies:
 - React, lifecycle methods
 - Get data from API
 - Searching data from API
+## Project: Pair Programming
+- Ren Mignogna: https://github.com/renato76 
+
 ## Install dependencies
 ```
 npm install
@@ -118,6 +122,7 @@ Data has been split into types on different routes.
 e.g. Breakfast route
 <img src="./src/styles/breakfast.png"  />
 Routes include the list of elements with the single link address to the item.
+
 ## Challenges
 The challenge was to manage the data flow from API as the data was really nested. And also working in pairs, we were encountered with GIT issues i.e push and pull (data). Use lifecycle method was a bit tricky compared with the REST API.
 ## Wins
@@ -126,6 +131,9 @@ Complete the data management in 3 days timeframe.
 ## Future Development
  
 I would like to put components styling, handle events animation.
+
+## Key Learnings
+It is really important to plan and wireframe the ideas correctly so that we don't waste time or get confused in the middle of the project. Communication is really important while working as a pair. Dividing work with the strength level is always a good point. 
  
 
 
