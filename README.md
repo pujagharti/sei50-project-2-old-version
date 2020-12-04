@@ -11,9 +11,10 @@ Technologies:
 - React, lifecycle methods
 - Get data from API
 - Searching data from API
-## Project: Pair Programming
+##  Project: Pair Programming
 - Ren Mignogna: https://github.com/renato76 
-
+## Deployed Link
+https://life-food.herokuapp.com/
 ## Install dependencies
 ```
 npm install
